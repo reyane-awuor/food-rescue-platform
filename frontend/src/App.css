@@ -1,0 +1,228 @@
+/* Role Selection Styles */
+.role-selection {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.role-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+}
+
+.role-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.role-card ul {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.role-card li {
+  margin: 0.5rem 0;
+}
+
+/* Role-specific button colors */
+.btn-donor {
+  background: #4CAF50 !important;
+  color: white !important;
+}
+
+.btn-recipient {
+  background: #2196F3 !important;
+  color: white !important;
+}
+
+.btn-volunteer {
+  background: #FF9800 !important;
+  color: white !important;
+}
+
+.btn-login {
+  background: #9C27B0 !important;
+  color: white !important;
+}
+
+.btn-logout {
+  background: #f44336 !important;
+  color: white !important;
+}
+
+.btn-reserve {
+  background: #4CAF50 !important;
+  color: white !important;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Header Actions */
+.header-actions {
+  margin-top: 1rem;
+}
+
+.auth-buttons, .user-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-actions span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Form Styles */
+.registration-form, .login-form {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-cancel {
+  background: #666 !important;
+  color: white !important;
+}
+
+/* Listing Card Enhancements */
+.listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.available {
+  background: #4CAF50;
+  color: white;
+}
+
+.status.reserved {
+  background: #FF9800;
+  color: white;
+}
+
+.status.claimed {
+  background: #2196F3;
+  color: white;
+}
+
+.listing-actions {
+  margin-top: 1rem;
+}
+
+.reserved-badge {
+  background: #FF9800;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* User Dashboard */
+.user-dashboard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.role-actions {
+  margin: 1rem 0;
+}
+
+.volunteer-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-refresh {
+  background: #9C27B0 !important;
+  color: white !important;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .role-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .volunteer-actions {
+    flex-direction: column;
+  }
+}

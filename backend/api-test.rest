@@ -1,0 +1,54 @@
+### Test 1: Register User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test Donor",
+  "email": "donor@test.com",
+  "password": "123456",
+  "role": "donor",
+  "phone": "123-456-7890",
+  "address": {
+    "street": "123 Main St",
+    "city": "Test City",
+    "state": "TS",
+    "zipCode": "12345"
+  }
+}
+
+### Test 2: Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "donor@test.com",
+  "password": "123456"
+}
+
+### Test 3: Create Food Listing (replace TOKEN with actual token)
+POST http://localhost:5000/api/food-listings
+Content-Type: application/json
+Authorization: Bearer TOKEN
+
+{
+  "title": "Fresh Apples",
+  "description": "Box of fresh organic apples",
+  "category": "fruits",
+  "quantity": "5kg",
+  "expiryDate": "2024-12-31",
+  "availableFrom": "2024-01-15T10:00:00.000Z",
+  "availableUntil": "2024-01-16T18:00:00.000Z",
+  "pickupAddress": {
+    "street": "123 Main St",
+    "city": "Test City",
+    "state": "TS",
+    "zipCode": "12345"
+  }
+}
+
+### Test 4: Get All Food Listings
+GET http://localhost:5000/api/food-listings
+
+### Test 5: Get User Profile (replace TOKEN)
+GET http://localhost:5000/api/auth/me
+Authorization: Bearer TOKEN
